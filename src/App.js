@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Filter from "./components/Filter";
+import RecordTable from "./components/RecordTable";
 
-function App() {
+const App = () => {
+  const [columnName, setColumnName] = useState("");
+
+  const handleChange = (label) => {
+    setColumnName(label);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <h1 className="main-header">Birthday Records</h1>
+      <Filter handleChange={handleChange} columnName={columnName} />
+      <RecordTable name={columnName} />
     </div>
   );
-}
+};
 
 export default App;

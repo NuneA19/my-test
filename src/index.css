@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+body {
+  font-size: 25px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+.table-header {
+  font-size: 20px !important;
+}
+
+.main-header{
+  text-align: center;
+}
+
+.width {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
 }
